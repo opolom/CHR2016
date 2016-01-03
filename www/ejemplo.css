@@ -1,0 +1,1071 @@
+/*
+Theme Name: Durus
+Theme URI: http://wpsam.com/durus/
+Description: Durus Wordpress Game Theme by WpSam. Free version available at arwebzone.com
+Author: WpSam
+Author URI: http://wpsam.com/
+*/
+
+/******* BODY ********/
+
+body {
+font-size: 12px;
+font-family: Arial, Verdana, Sans-Serif;
+background:#f4f4f4 url(images/bg.png) repeat;
+color:#4a4b4b;
+text-align: left;
+margin:0;
+}
+
+#durustop {
+margin:0;
+padding:0;
+background:#222222 url(images/topbg.png) repeat-x;
+height:30px;
+}
+
+#main {
+width:980px;
+margin:0 auto;
+}
+
+a {
+text-decoration:none;
+}
+
+img {
+border:none;
+}
+
+.clear {
+clear:both;
+}
+
+/******* MENUTOP ********/
+
+#dmenutop {
+height:30px;
+margin:0 auto;
+overflow:hidden;
+width:980px;
+padding:0;
+}
+
+.dtopmenu {
+float:left;
+width:600px;
+overflow:hidden;
+margin:0;
+padding:7px 0 0 14px;
+}
+
+.dtopmenu ul {
+margin:0;
+padding:0;
+}
+
+.dtopmenu ul li {
+margin:0;
+padding:0px 7px 0px 10px;
+display:inline;
+background:url(images/topmenu.gif) no-repeat left;
+}
+
+.dtopmenu ul li a{
+margin:0;
+padding:0;
+font-size:12px;
+color:#dddddd;
+}
+
+.dtopmenu ul li a:hover{
+color:#fff;
+text-decoration:none;
+}
+
+/******* TOP ********/
+
+.topmenu {
+margin:0;
+padding:7px 16px 0 0;
+float:right;
+width:300px;
+text-align:right;
+}
+
+.topmenu ul {
+margin:0;
+padding:0;
+}
+
+.topmenu ul li {
+margin:0;
+padding:0 0 0 12px;
+display:inline;
+list-style:none;
+border-left:1px solid #dddddd;
+}
+
+.topmenu ul li.bordernone {
+border-left:none;
+padding:0 8px 0 10px;
+}
+
+.topmenu ul li a {
+margin:0;
+padding:0;
+color:#dddddd;
+}
+
+.topmenu ul li a:hover {
+margin:0;
+padding:0;
+color:#ffffff;
+}
+
+/******* HEADER ********/
+
+#header {
+height:140px;
+overflow:hidden;
+margin:0;
+padding.0;
+}
+
+.title {
+margin:0;
+padding:0;
+width:600px;
+float:left;
+}
+
+.title h1, .title h1 a {
+margin:28px 0 0 20px;
+padding:0;
+font-size:74px;
+color:#ffa800;
+}
+
+/*This will work for firefox*/
+@-moz-document url-prefix() {
+.title h1, .title h1 a{
+margin:16px 0 0 20px;
+}
+}
+
+/******* MENU ********/
+
+#primary-nav {
+background:#f4b62f url(images/menubg.png) no-repeat;
+height:49px;
+margin:0 0 0 0;
+}
+
+#primary-nav ul {
+height:49px;
+margin:0 10px 0 10px;
+}
+
+#primary-nav ul li {
+font-weight:bold;
+font-size:13px;
+}
+
+#primary-nav ul li a {
+margin:9px 5px 1px 0;
+text-decoration:none;
+color:#aa0c0c;
+}
+
+#primary-nav ul li a:hover {
+color:#f8f8f8;
+}
+
+#primary-nav ul li ul li a {
+margin:2px 0px 1px 0;
+}
+
+#primary-nav ul li ul {
+height:49px;
+margin:0 0px 0 0px;
+}
+
+/******* SUPERFISH ********/
+
+.sf-menu,.sf-menu *{list-style:none;margin:0;padding:0;}
+.sf-menu {line-height:1.0;float:left;}
+.sf-menu ul {position:absolute;top:-999em;width:13em;}
+.sf-menu ul li {width:100%;}
+.sf-menu li:hover {visibility:inherit;}
+.sf-menu li {float:left;position:relative;background:transparent;}
+.sf-menu a {display:block;position:relative;text-decoration:none;padding:.75em 1em;}
+
+.sf-menu li:hover ul, 
+.sf-menu li.sfHover ul {left:0;top:3.8em;z-index:99;}
+
+.sf-menu a {color:#13a;}
+.sf-menu li li, .sf-menu li li li{background:#ff8400;border-top:none;border-bottom:1px solid #aa7818;}
+.sf-menu li:hover,.sf-menu li.sfHover,.sf-menu a:hover{outline:0;color:#aa7818}
+.sf-menu a:focus{outline:0;}
+.sf-menu a.sf-with-ul{padding-right:2.25em;min-width:1px;}
+
+.sf-sub-indicator{position:absolute;display:block;right:.75em;top:0;width:10px;height:10px;text-indent:-999em;
+overflow:hidden;background:url(images/arrows-white.png) no-repeat -10px -100px;}
+a > .sf-sub-indicator{top:.8em;background-position:0 -100px;}
+a:focus > .sf-sub-indicator,a:hover > .sf-sub-indicator,a:active > .sf-sub-indicator,li:hover > a > .sf-sub-indicator,li.sfHover > a > .sf-sub-indicator{background-position:-10px -100px;}
+.sf-menu ul a > .sf-sub-indicator{background-position:0 0;}
+.sf-shadow ul{background:url(images/shadow.png) no-repeat bottom right;padding:0 8px 9px 0;}
+.sf-shadow ul.sf-shadow-off{background:transparent;}
+ul.sf-menu li:hover li ul,ul.sf-menu li.sfHover li ul,ul.sf-menu li li:hover li ul,ul.sf-menu li li.sfHover li ul{top:-999em;}
+ul.sf-menu li li:hover ul,ul.sf-menu li li.sfHover ul,ul.sf-menu li li li:hover ul,ul.sf-menu li li li.sfHover ul{left:13em;top:0;}
+.sf-menu ul .sf-sub-indicator,.sf-menu ul a:focus > .sf-sub-indicator,.sf-menu ul a:hover > .sf-sub-indicator,.sf-menu ul a:active > .sf-sub-indicator,.sf-menu ul li:hover > a > .sf-sub-indicator,.sf-menu ul li.sfHover > a > .sf-sub-indicator{background-position:-10px 0;}
+
+/******* SEARCH ********/
+
+:focus{outline:0;}
+input{padding:0;margin:0;}
+.arama1{width:300px;height:57px;background:url("images/search.png") no-repeat;border:none;padding:0 20px;}
+.ara{width:70px;height:57px;background:url("images/searchit.png");border:none;}
+
+.search {
+margin:40px 0px 0px 0;
+padding:0;
+overflow:hidden;
+width:320px;
+float:right;
+}
+
+.main_search{
+height:30px;
+margin:0px 0 0 0px;
+padding:0;
+text-align:center;
+}
+
+.searchform_top{
+padding:0px 0px 0 0;
+float:left;
+}
+
+.searchform_top_text{
+width:190px;
+height:20px;
+border:none;
+font-size:12px;
+float:left;
+margin:16px 4px 0 26px;
+padding:0;
+color:#304e62;
+background:none;
+}
+
+/******* CONTENT ********/
+
+#content {
+margin:10px 0 0 0;
+padding:10px;
+overflow:hidden;
+border:1px solid #dddddd;
+background:#fff;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 8px 6px -6px #dddddd;
+-moz-box-shadow: 0 8px 6px -6px #dddddd;
+box-shadow: 0 8px 6px -6px #dddddd;
+}
+
+#contop {
+margin:10px 0 0 0;
+padding:10px;
+overflow:hidden;
+border:1px solid #dddddd;
+background:#fff;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0 8px 6px -6px #dddddd;
+-moz-box-shadow: 0 8px 6px -6px #dddddd;
+box-shadow: 0 8px 6px -6px #dddddd;
+}
+
+.contopleft {
+width:730px;
+float:left;
+overflow:hidden;
+margin:0;
+padding:0;
+}
+
+.contopright {
+width:220px;
+float:right;
+overflow:hidden;
+margin:0;
+padding:0;
+}
+
+.contopright h2 {
+margin:0 0 7px 0;
+padding:0 0 2px 5px;
+border-bottom:1px dotted #dddddd;
+color:#ff8500;
+font-weight:bold;
+font-size:16px;
+}
+
+.contopright ol {
+margin:0 0 0 20px;
+padding:0;
+}
+
+.contopright ol li {
+margin:0 0 6px 0;
+padding:0;
+}
+
+.contopright ol li a {
+margin:0;
+padding:0;
+color:#3c6689;
+font-weight:bold;
+}
+
+.contopright ol li a:hover {
+color:#618eb4;
+}
+
+.navigation {
+margin:5px 0 0 0px;
+clear:left;
+font-weight:normal;
+padding:10px 0 0 0;
+color:#141d24;
+text-align:center;
+}
+
+.Nav {
+margin:0 0 15px 0;
+}
+
+.Nav span {
+background:#e1edf7;
+padding:6px 8px 6px 8px;
+margin-right:5px;
+border:1px solid #cfdeea;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+.Nav span.on {
+font-weight:bold;
+padding:6px 8px 6px 8px;
+margin-right:5px;
+border:1px solid #cfdeea;
+background:#e1edf7;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+.Nav a {
+font-weight:bold;
+padding:6px 8px 6px 8px;
+margin-right:5px;
+border:1px solid #cfdeea;
+font-size:12px;
+background:#e1edf7;
+color:#4a4b4b;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+.Nav a:hover {
+background:#b2c7d9;
+color:#fff;
+}
+
+/******* POSTS ********/
+
+#postsbody {
+margin:0 2px 0 0;
+padding:0;
+overflow:hidden;
+}
+
+.newgames {
+margin:0 0 10px 0;
+padding:0;
+overflow:hidden;
+}
+
+.newgames h2 {
+margin:0 0 2px 0;
+padding:0 0 2px 5px;
+border-bottom:1px dotted #dddddd;
+color:#ff8500;
+font-weight:bold;
+font-size:24px;
+}
+
+#gamefirst {
+overflow:hidden;
+margin:10px 0 0 0;
+padding:0;
+}
+
+.gleftad {
+float:left;
+width:300px;
+padding:0;
+margin:0 14px 10px 0;
+}
+
+.gamefinfo {
+overflow:hidden;
+margin:0;
+padding:0;
+float:right;
+width:640px;
+}
+
+.gname {
+margin:0 0 10px 0;
+padding:0;
+}
+
+.gname p {
+margin:0;
+padding:0;
+}
+
+.gname a, .samrandgame a, .bsamrandgame a, .postentry a {
+color:#3c6689;
+}
+
+.gname a:hover, .samrandgame a:hover, .bsamrandgame a:hover, .postentry a:hover {
+color:#618eb4;
+}
+
+.gstrong {
+color:#ff8500;
+font-size:13px;
+font-weight:bold;
+}
+
+.gamefthumb {
+margin:0 5px 0 0;
+padding:1px;
+float:right;
+width:100px;
+border:1px solid #bed5e9;
+}
+
+.gnameplay {
+margin:0;
+padding:0;
+overflow:hidden;
+text-align:center;
+}
+
+.gamepartone {
+margin:0;
+padding:0;
+overflow:hidden;
+}
+
+#gameparttwo {
+margin:10px 0 0 0;
+padding:0;
+overflow:hidden;
+}
+
+#gameparttwo h2 {
+margin:0 0 2px 0;
+padding:0 0 2px 5px;
+border-bottom:1px dotted #dddddd;
+color:#ff8500;
+font-weight:bold;
+font-size:24px;
+}
+
+.randgames {
+margin:10px 0 10px 9px;
+padding:0;
+overflow:hidden;
+}
+
+.samrandgame {
+margin:0 14px 0 0;
+padding:0;
+overflow:hidden;
+float:left;
+width:104px;
+}
+
+.samrandimg {
+border:1px solid #bed5e9;
+margin:0 0 5px 0;
+padding:1px;
+height:100px;
+}
+
+.samrandgame p {
+margin:0;
+padding:0;
+line-height:17px;
+text-align:center;
+}
+
+#rightad {
+float:right;
+width:300px;
+padding:0;
+margin:0 14px 10px 0;
+}
+
+.gamespart {
+margin:10px 0 0 0;
+padding:3px 5px;
+overflow:hidden;
+}
+
+.ludusgame {
+margin:0 14px 12px 0;
+padding:0;
+float:left;
+width:300px;
+overflow:hidden;
+height:117px;
+border-bottom:1px dotted #dddddd;
+}
+
+.gamethumb {
+margin:0 5px 0 0;
+padding:1px;
+float:left;
+width:100px;
+border:1px solid #bed5e9;
+}
+
+.gameinfo {
+margin:0;
+padding:0;
+float:right;
+width:190px;
+}
+
+.gametitle {
+margin:0 0 3px 0;
+padding:0;
+}
+
+.gametitle a {
+margin:0;
+padding:0;
+color:#3c6689;
+font-weight:bold;
+}
+
+.gametitle a:hover {
+color:#618eb4;
+}
+
+.gamedesc {
+margin:0;
+padding:0;
+}
+
+.gamedesc p {
+margin:0 0 5px 0;
+padding:0;
+}
+
+.gameviews {
+margin:0 0 5px 0;
+padding:0;
+color:#5993c3;
+font-weight:bold;
+}
+
+.gamevotes {
+margin:0;
+padding:0;
+color:#5993c3;
+font-weight:bold;
+}
+
+#centerad {
+text-align:center;
+padding:0;
+margin:0 0 10px 0;
+}
+
+.postentry {
+margin:5px 0px;
+padding:0;
+line-height:18px;
+}
+
+.postentry p {
+margin:0 0 10px 0;
+padding:0;
+}
+
+/******* IMAGES ********/
+
+img.alignleft, img.left { float: left;margin-right:7px; margin-top:5px; }
+img.alignright, img.right { float: right; margin-left:7px; margin-top:5px;}
+img.aligncenter, img.center { margin-bottom:7px;display: block; margin-right: auto; margin-left: auto; float: none; clear: both; }
+img.alignnone, img.block { display: block; clear: both; }
+img.frame { background: #eee; border-style: solid; border-color: #ddd; }
+img.stack { clear: none !important; }
+img[align="left"] { float: left; clear: left; }
+img[align="right"] { float: right; clear: right; }
+img[align="middle"] { display: block; margin-right: auto; margin-left: auto; float: none; clear: both; }
+
+/*—:[ image captioning ]:—*/
+.wp-caption { border-style: solid; border-color: #ddd; background-color: #eee; text-align: center; font-style: italic; }
+.wp-caption.alignleft { float: left; }
+.wp-caption.alignright { float: right; }
+.wp-caption.aligncenter { margin-right: auto; margin-left: auto; float: none; clear: both; }
+.wp-caption.alignnone { clear: both; }
+.alignright {float: right;}
+.alignleft {float: left;}
+
+.postentry h1 {
+font-size:22px;
+line-height:26px;
+margin:5px 0;
+padding:0;
+}
+
+.postentry h2 {
+font-size:20px;
+line-height:24px;
+background:none;
+color:#4a4b4b;
+border-bottom:none;
+margin:5px 0;
+padding:0;
+}
+
+.postentry h3 {
+font-size:18px;
+line-height:22px;
+margin:5px 0;
+padding:0;
+}
+
+.postentry h4 {
+font-size:16px;
+line-height:20px;
+margin:5px 0;
+padding:0;
+}
+
+blockquote {
+border-left:1px dotted #c2c2c2;
+padding-left:10px;
+font-style:italic;
+color:#c2c2c2;
+}
+
+.postentry ul li, .postentry ol li {
+margin:0 0 7px 0;
+}
+
+/******* SINGLE ********/
+
+#gamesecond {
+margin:0;
+padding:0;
+overflow:hidden;
+}
+
+.gamebottom {
+margin:15px 0 10px 0;
+padding:15px 0 0 0;
+overflow:hidden;
+border-top:1px dotted #dddddd;
+}
+
+.gamepleft {
+width:580px;
+float:left;
+overflow:hidden;
+}
+
+.gamepright {
+width:340px;
+float:right;
+overflow:hidden;
+}
+
+.gbottomad {
+margin:0 0 15px 0;
+padding:0;
+}
+
+#gamebottomrand {
+margin:0;
+padding:0;
+overflow:hidden;
+}
+
+#gamebottomrand h3 {
+margin:0 0 2px 0;
+padding:0 0 2px 0px;
+border-bottom:1px dotted #dddddd;
+color:#ff8500;
+font-weight:bold;
+font-size:22px;
+}
+
+.brandgames {
+margin:10px 0 10px 4px;
+padding:0;
+overflow:hidden;
+}
+
+.bsamrandgame {
+margin:0 8px 5px 0;
+padding:0;
+overflow:hidden;
+float:left;
+width:104px;
+height:145px;
+}
+
+.bsamrandimg {
+border:1px solid #bed5e9;
+margin:0 0 5px 0;
+padding:1px;
+height:100px;
+}
+
+.bsamrandgame p {
+margin:0;
+padding:0;
+line-height:17px;
+text-align:center;
+}
+
+.gametop {
+margin:0 0 10px 0;
+padding:0 0 5px 0;
+overflow:hidden;
+border-bottom:1px dotted #dddddd;
+}
+
+.gamerate {
+margin:0;
+padding:0;
+float:left;
+width:150px;
+}
+
+.gameshare {
+margin:0;
+padding:0;
+float:right;
+width:225px;
+}
+
+#playgame {
+overflow:hidden;
+margin:0 auto;
+padding:0;
+width:733px;
+height:550px;
+text-align:center;
+}
+
+.gamecontent {
+margin:20px 0 0 0;
+padding:0;
+}
+
+.gamecontent h3 {
+margin:0 0 2px 0;
+padding:0 0 2px 0px;
+font-weight:bold;
+font-size:12px;
+}
+
+.gamecontent p {
+margin:5px 0 0 0;
+padding:0;
+line-height:18px;
+}
+
+.gamecats {
+margin:10px 0 0 0;
+padding:0;
+}
+
+.gamecats p {
+margin:0;
+padding:0;
+}
+
+.gametags {
+margin:5px 0 0 0;
+padding:0;
+}
+
+.gametags p {
+margin:0;
+padding:0;
+}
+
+.gamecontent a, .gamecats a, .gametags a {
+color:#5993c3;
+font-weight:bold;
+}
+
+.gamecontent a:hover, .gamecats a:hover, .gametags a:hover {
+text-decoration:underline;
+}
+
+.gbold {
+font-weight:bold;
+}
+
+/*********COMMENTS ******/
+
+.comment a{
+text-decoration:none;
+font-size:12px;
+color:#ff8500;
+}
+.commentlist li .avatar { 
+float: right;
+border: 1px solid #eee;
+padding: 2px;
+margin-top:-3px;
+}
+
+.commentlist cite, .commentlist cite a {
+color:#ff8500;
+font-size:12px;
+font-weight:bold;
+}
+
+.commentlist p {
+line-height:18px;
+}
+
+#commentform p {
+line-height:16px;
+}
+
+.commentmetadata {
+}
+
+.commentmetadata a{
+color:#b1b1b1;
+font-size:12px;
+}
+
+h3.comments {
+margin:0 0 10px 0;
+padding:0 0 10px 0;
+font-size:14px;
+line-height:20px;
+}
+
+h3#comments {
+margin:0;
+padding:0;
+font-size:14px;
+line-height:20px;
+}
+
+#respond {
+margin:0 0 15px 0;
+padding:0;
+overflow:hidden;
+}
+
+h3.respond {
+margin:10px 0 0 0;
+padding:0;
+font-size:14px;
+line-height:20px;
+}
+
+#respond h3{
+margin:0;
+padding:0;
+font-size:14px;
+line-height:20px;
+}
+
+#respond a {
+color:#ff8500;
+}
+
+.alt {
+margin: 0;
+padding: 10px;
+}
+
+.commentlist {
+padding: 0;
+margin:0;
+}
+
+.commentlist li {
+margin: 0px 0 10px 0px;
+padding:10px;
+list-style: none;
+border:1px solid #dddddd;
+overflow:hidden;
+background:#fdfdfd;
+}
+
+.commentlist li.bypostauthor {
+margin: 0px 0 10px 0px;
+padding:10px;
+list-style: none;
+border:1px solid #dddddd;
+background:#f9f8f8;
+}
+
+.commentlist li ul li { 
+margin-right: -5px;
+margin-left: 10px;
+margin-top:10px;
+overflow:hidden;
+clear:both;
+}
+
+.commentlist li ul li.bypostauthor { 
+margin-right: -5px;
+margin-left: 10px;
+margin-top:10px;
+overflow:hidden;
+clear:both;
+}
+
+.commentlist p {
+margin: 10px 5px 10px 0;
+line-height:18px;
+}
+
+.children { padding: 0; }
+
+#commentform p {
+margin: 5px 0 0 0px;
+}
+
+.nocomments {
+text-align: center;
+margin: 0;
+padding: 0;
+}
+
+.commentmetadata {
+margin: 0;
+display: block;
+}
+
+#commentform input {
+width: 220px;
+padding: 2px 2px 2px 27px;
+margin: 5px 5px 1px 0;
+border:1px solid #bebebe;
+color:#404040;
+background:#f5f5f5;
+}
+
+#commentform input#author {
+background:#f5f5f5 url(images/FormName.png) no-repeat left;
+}
+
+#commentform input#author:hover {
+background:#fafbfb url(images/FormName.png) no-repeat left;
+}
+
+#commentform input#email {
+background:#f5f5f5 url(images/FormEmail.png) no-repeat left;
+}
+
+#commentform input#email:hover {
+background:#fafafb url(images/FormEmail.png) no-repeat left;
+}
+
+#commentform input#url {
+background:#f5f5f5 url(images/FormURI.png) no-repeat left;
+}
+
+#commentform input#url:hover {
+background:#fafbfa url(images/FormURI.png) no-repeat left;
+}
+
+#commentform input:hover {
+background:#fbfafa;
+}
+
+#commentform {
+margin: 5px 10px 0 0;
+}
+#commentform textarea {
+width: 99%;
+padding: 2px;
+border:1px solid #bebebe;
+background:#f5f5f5;
+color:#404040;
+}
+
+#commentform textarea:hover {
+background:#fbfafa;
+}
+
+#commentform #submit {
+margin: 0 0 5px auto;
+float: right;
+background:#ff8500;
+border:1px solid #d36f02;
+padding:3px 3px 3px 3px;
+width:135px;
+color:#fff;
+font-weight:bold;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+}
+
+#commentform #submit:hover {
+background:#fd921d;
+}
+
+
+/******* FOOTER ********/
+
+#footer {
+clear:both;
+margin:20px 0;
+padding:0;
+text-align:center;
+color:#7e7e7e;
+}
+
+#footer p {
+margin:0;
+padding:0 0 5px 0;
+}
+
+#footer a {
+color:#7e7e7e;
+border-bottom:1px dotted #7e7e7e;
+}
+
+#footer a:hover {
+border-bottom:none;
+}

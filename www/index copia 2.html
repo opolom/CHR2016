@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<!--
+    
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="css/chr.css" />
+        <link rel="stylesheet" href="css/chr-theme.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.3.min.css" />
+
+        <title>Hello World</title>
+
+    </head>
+<body>
+    
+    
+<!-------------------------------  PAGINA de INICIO -->     
+    
+<div data-role="page" id="inicio">
+   
+<!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+
+<a href="#" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Inicio</a>
+
+<script charset="utf−8" type="text/javascript"> 
+	
+function connect(e) 
+	{ 
+	
+var categoryData = {
+	  SMA: {
+		  name: "Senior Masculino A",
+		  description: "Senior Masculino Lliga Catalana.",
+		  items: [{jornada: [{idjornada:1},{fecha:"27/28 SEPTIEMBRE"},
+							 {logolocal:"logo1"},{nomlocal:"CHR"},{gollocal:"30"},
+							 {logovisit:"logo2"},{nomvisit:"Granollers"},{golvisit:"28"}]},
+				  {jornada: [{idjornada:2},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  {jornada: [{idjornada:3},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  {jornada: [{idjornada:4},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  {jornada: [{idjornada:5},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  ]},
+	  SMB: {
+		  name: "Senior Masculino B",
+		  description: "Senior Masculino Tercera Catalana.",
+		  items: [{jornada: [{idjornada:1},{fecha:"27/28 SEPTIEMBRE"},
+							 {logolocal:"logo1"},{nomlocal:"CHR"},{gollocal:"30"},
+							 {logovisit:"logo2"},{nomvisit:"Granollers"},{golvisit:"28"}]},
+				  {jornada: [{idjornada:2},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  {jornada: [{idjornada:3},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				{jornada: [{idjornada:4},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  {jornada: [{idjornada:5},{fecha:"22/09/14"},{logolocal:"logo1"},{nomlocal:"CHR"},
+							 {gollocal:"30"},{logovisit:"logo2"},{nomvisit:"Granollers"},
+							 {golvisit:"28"}]},
+				  ]},
+	  
+	   };	
+	
+		var term= {button:e}; 	
+
+
+    $.getJSON("http://pruebaappcelerator.opolo-web.es/reply.php",function(result){
+	
+	  for (x=0; x < result.length; x++) { 
+        $("#milista").append("<li>"+result[x]['id'] + " " + result[x]['nombre'] + " " + result[x]['descripcion']+"</li>");
+	
+	alert(result[x]['id']);
+	alert(result[x]['nombre']);
+	alert(result[x]['descripcion']);
+
+
+var NUMERO_JORNADA = 0;
+var INDICE_NOMVISIT = 6;
+var jornadas_smb = categoryData.SMB.items;
+var jornada_0 = jornadas_smb[NUMERO_JORNADA];
+//var nombre_visitante = jornada_0.jornada[INDICE_NOMVISIT].nomvisit;
+
+var nombre_visitante = categoryData.SMB.items[0].jornada[6].nomvisit;
+    
+//    $(document).ready(function(){
+//        alert("Lo que necesitas es: "+ categoryData.SMB.items[0].jornada[6].nomvisit);
+//    })
+
+		
+    }
+	
+	
+	for (x=0; x < result.length; x++) { 
+//    for (x=0; x < 3; x++) { 
+      		  
+				  categoryData.SMB.items[x].jornada[0].idjornada 	= result[x]['id'];
+				  categoryData.SMB.items[x].jornada[1].fecha	= result[x]['id'] + "Sept";
+				  categoryData.SMB.items[x].jornada[2].logolocal  = result[x]['id'] + "logo"; 
+				  categoryData.SMB.items[x].jornada[3].nomlocal  = result[x]['nombre']; 
+				  categoryData.SMB.items[x].jornada[4].gollocal  = result[x]['id'] + "gol1";
+				  categoryData.SMB.items[x].jornada[5].logovisit  = result[x]['id'] + "logo2";
+				  categoryData.SMB.items[x].jornada[6].nomvisit  = result[x]['descripcion'];
+				  categoryData.SMB.items[x].jornada[7].golvisit 	= result[x]['id'] + "gol2";
+	
+	alert(x);
+	alert(result.length);
+	alert("matriz: " + categoryData.SMB.items[x].jornada[3].nomlocal + categoryData.SMB.items[x].jornada[6].nomvisit);
+	
+				  
+	}
+	
+	
+	$('#milista').listview('refresh');
+  });
+
+		
+	} 
+
+</script>
+	              
+                  
+<!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+  <div class="center-wrapper">
+    <h1>
+    <img class="opm" src="img/icon.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+  </div>
+</div>
+<!--      
+      <h1><img src="img/icon.PNG" border="0" style="margin-bottom: -5px;padding-right: 15px;">CHR CORNELLA 1</h1>
+	<a href="index.html" data-icon="check" class="ui-btn-right">Info</a>  
+    </div>
+    -->
+
+<!-- FIN CABECERA -->    
+
+<!-- CUERPO -->    
+
+    <div role="main" class="ui-content">
+  <center><input onclick="connect(this.value)" type="button" value="accede a bd" /></center>
+    
+<ol data-role="listview" data-inset="true" id="milista">
+  <li><h3>Senior Masculino "A"</h3></li>
+  <li><h3>Senior Masculino "B"</h3> </li>
+</ol>
+
+
+
+
+     </div>  
+   
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a href="#inicio" data-id="footer_inicio" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a" data-icon="user">Plantillas</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->    
+
+
+<!------------------------------- FIN  PAGINA de INICIO -->     
+
+<!-------------------------------  PARTIDOS -->     
+  
+  </div>
+  <div data-role="page" id="partidos">
+  
+  <!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+    <!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+    	<div class="center-wrapper">
+      	<h1>
+       	<img class="opm" src="img/icon.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+    	</div>
+    
+    
+    <!--   OJOOOOOOOOOOO  ----------------------->
+    
+    <script charset="utf−8" type="text/javascript">                 
+	  var categoryData = {
+		  SMB: {
+			  name: "Animals",
+			  description: "All your favorites from aardvarks to zebras.",
+			  items: [{name: "Pets"},{name: "Farm Animals"},{name: "Wild Animals"}]},
+		  JM: {
+			  name: "Colors",
+			  description: "Fresh colors from the magic rainbow.",
+			  items: [{name: "Blue"},{name: "Green"},{name: "Orange"},{name: "Purple"},{name: "Red"},
+				  {name: "Yellow"},{name: "Violet"}]},
+		  CF: {
+			  name: "Vehicles",
+			  description: "Everything from cars to planes.",
+			  items: [{name: "Cars"},{name: "Planes"},{name: "Construction"}]}
+	  };		    
+		  
+		    function showCategory( urlObj, options )
+		{
+			var categoryName = urlObj.hash.replace( /.*category=/, "" ),
+		
+				// Get the object that represents the category we
+				// are interested in. Note, that at this point we could
+				// instead fire off an ajax request to fetch the data, but
+				// for the purposes of this sample, it's already in memory.
+				category = categoryData[ categoryName ],
+		
+				// The pages we use to display our content are already in
+				// the DOM. The id of the page we are going to write our
+				// content into is specified in the hash before the '?'.
+				pageSelector = urlObj.hash.replace( /\?.*$/, "" );
+		
+			if ( category ) {
+				// Get the page we are going to dump our content into.
+				var $page = $( pageSelector ),
+		
+					// Get the header for the page.
+					$header = $page.children( ":jqmData(role=header)" ),
+		
+					// Get the content area element for the page.
+					$content = $page.children( ":jqmData(role=content)" ),
+		
+					// The markup we are going to inject into the content
+					// area of the page.
+					markup = "<p>" + category.description + "</p><ul data-role='listview' data-inset='true'>",
+		
+					// The array of items for this category.
+					cItems = category.items,
+		
+					// The number of items in the category.
+					numItems = cItems.length;
+		
+				// Generate a list item for each item in the category
+				// and add it to our markup.
+				for ( var i = 0; i < numItems; i++ ) {
+					markup += "<li>" + cItems[i].name + "</li>";
+				}
+				markup += "</ul>";
+		
+				// Find the h1 element in our header and inject the name of
+				// the category into it.
+				$header.find( "h1" ).html( category.name );
+		
+				// Inject the category items markup into the content element.
+				$content.html( markup );
+		
+				// Pages are lazily enhanced. We call page() on the page
+				// element to make sure it is always enhanced before we
+				// attempt to enhance the listview markup we just injected.
+				// Subsequent calls to page() are ignored since a page/widget
+				// can only be enhanced once.
+				$page.page();
+		
+				// Enhance the listview we just injected.
+				$content.find( ":jqmData(role=listview)" ).listview();
+		
+				// We don't want the data-url of the page we just modified
+				// to be the url that shows up in the browser's location field,
+				// so set the dataUrl option to the URL for the category
+				// we just loaded.
+				options.dataUrl = urlObj.href;
+		
+				// Now call changePage() and tell it to switch to
+				// the page we just modified.
+				$.mobile.changePage( $page, options );
+			}
+		}
+		
+		// Listen for any attempts to call changePage().
+		$(document).bind( "pagebeforechange", function( e, data ) {
+			// We only want to handle changePage() calls where the caller is
+			// asking us to load a page by URL.
+			if ( typeof data.toPage === "string" ) {
+				// We are being asked to load a page by URL, but we only
+				// want to handle URLs that request the data for a specific
+				// category.
+				var u = $.mobile.path.parseUrl( data.toPage ),
+					re = /^#category-item/;
+				if ( u.hash.search(re) !== -1 ) {
+					// We're being asked to display the items for a specific category.
+					// Call our internal method that builds the content for the category
+					// on the fly based on our in-memory category data structure.
+					showCategory( u, data.options );
+		
+					// Make sure to tell changePage() we've handled this call so it doesn't
+					// have to do anything.
+					e.preventDefault();
+				}
+			}
+		});
+
+</script>
+    
+    <!-- OJOOOOOOOOOOOOOOOO   ------------------->
+    
+    </div>
+
+<!-- FIN CABECERA -->    
+
+
+<!-- CUERPO -->    
+<div role="main" class="ui-content">
+
+<!--<ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">  -->
+<ul data-role="listview" data-inset="true">
+<li data-role="list-divider">Seleccione un equipo para ver sus partidos</li>
+<!--A la lista le aplicamos el data-role listview y el resto de configuración -->
+  <li><a href="#partsma"><img src="img/logo.png" width="100" height="100"/><h3>Senior Masculino "A"</h3>
+<p>Lliga Catalana</p></a></li> 
+<!-- En cada elemento metemos un enlace, una imagen (tamaño 100+100) y un título h3, y además una pequeña descripción -->
+  <li><a href=#category-items?category=SMB><img src="img/logo.png" width="100" height="100"/><h3>Senior Masculino "B"</h3>
+<p>Tercera Catalana</p></a></li>
+
+  <li><a href=#category-items?category=JM><img src="img/logo.png" width="100" height="100"/><h3>Juvenil Masculino</h3>
+<p>Primera Catalana</p></a></li>
+  <li><a href=#category-items?category=CF><img src="img/logo.png" width="100" height="100"/><h3>Cadete Femenino</h3>
+<p>Lliga Catalana</p></a></li> 
+</ul>
+
+
+
+    
+      <a href="#inicio" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+    </div>
+
+ 
+ 
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-id="allot_footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a href="#inicio" data-id="footer_inicio" data-theme="a" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a" data-icon="user">Plantillas</a></li>
+             
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->    
+
+        
+ 
+<!------------------------------- FIN PARTIDOS -->     
+
+<!-------------------------------  CLASIFICACION -->     
+  
+  </div>
+  <div data-role="page" id="clasi">
+  
+  <!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+    <!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+    	<div class="center-wrapper">
+      	<h1>
+       	<img class="opm" src="img/logo.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+    	</div>
+	</div>
+
+<!-- FIN CABECERA -->    
+
+
+<!-- CUERPO -->    
+<div role="main" class="ui-content">
+
+<!--<ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">  -->
+<ul data-role="listview" data-inset="true">
+<li data-role="list-divider">Seleccione un equipo para ver su clasificación</li>
+<!--A la lista le aplicamos el data-role listview y el resto de configuración -->
+  <li><a href="#classma"><img src="img/logo.png" width="50" height="50"/><h3>Senior Masculino "A"</h3>
+<p>Lliga Catalana</p></a></li> 
+<!-- En cada elemento metemos un enlace, una imagen (tamaño 100+100) y un título h3, y además una pequeña descripción -->
+  <li><a href="#2"><img src="img/logo.png" width="50" height="50"/><h3>Senior Masculino "B"</h3>
+<p>Tercera Catalana</p></a></li>
+  <li><a href="#3"><img src="img/logo.png" width="50" height="50"/><h3>Juvenil Masculino</h3>
+<p>Primera Catalana</p></a></li>
+  <li><a href="#3"><img src="img/logo.png" width="50" height="50"/><h3>Cadete Femenino</h3>
+<p>Lliga Catalana</p></a></li> 
+</ul>
+
+
+
+    
+      <a href="#inicio" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+    </div>
+
+ 
+ 
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-id="allot_footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a href="#inicio" data-id="footer_inicio" data-theme="a" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a" data-icon="user">Plantillas</a></li>
+   
+  
+   
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->    
+
+        
+ 
+<!------------------------------- FIN CLASIFICACION -->     
+        
+<!-------------------------------  PLANTILLAS -->     
+  
+  </div>
+  <div data-role="page" id="plantillas">
+  
+  <!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+    <!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+    	<div class="center-wrapper">
+      	<h1>
+       	<img class="opm" src="img/logo.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+    	</div>
+	</div>
+
+<!-- FIN CABECERA -->    
+
+
+<!-- CUERPO -->    
+<div role="main" class="ui-content">
+
+<!--<ul data-role="listview" data-inset="true" data-autodividers="true" data-filter="true">  -->
+<ul data-role="listview" data-inset="true">
+<li data-role="list-divider">Seleccione un equipo para ver su plantilla</li>
+<!--A la lista le aplicamos el data-role listview y el resto de configuración -->
+  <li><a href="#1"><img src="img/logo.png" width="50" height="50"/><h3>Senior Masculino "A"</h3>
+<p>Lliga Catalana</p></a></li> 
+<!-- En cada elemento metemos un enlace, una imagen (tamaño 100+100) y un título h3, y además una pequeña descripción -->
+  <li><a href="#2"><img src="img/logo.png" width="50" height="50"/><h3>Senior Masculino "B"</h3>
+<p>Tercera Catalana</p></a></li>
+  <li><a href="#3"><img src="img/logo.png" width="50" height="50"/><h3>Juvenil Masculino</h3>
+<p>Primera Catalana</p></a></li>
+  <li><a href="#3"><img src="img/logo.png" width="50" height="50"/><h3>Cadete Femenino</h3>
+<p>Lliga Catalana</p></a></li> 
+</ul>
+
+
+
+    
+      <a href="#inicio" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+    </div>
+
+ 
+ 
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-id="allot_footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a href="#inicio" data-id="footer_inicio" data-theme="a" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="user">Plantillas</a></li>
+      
+      
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->    
+
+        
+ 
+<!------------------------------- FIN PLANTILLAS -->     
+   
+   
+         
+<!-------------------------------  DETALLE PARTIDOS SMA-->     
+
+  <div data-role="page" id="partsma">
+  
+  <!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+    <!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+    	<div class="center-wrapper">
+      	<h1>
+       	<img class="opm" src="img/logo.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+    	</div>
+
+<!-- // OJOOOOOOOOOOOOOO  -->
+
+<script charset="utf−8" type="text/javascript"> 
+	function carga_equipos() 
+	{  
+    $.getJSON("http://pruebaappcelerator.opolo-web.es/reply.php",function(result){
+      for (x=0; x < result.length; x++) { 
+       
+	 $("#listapartidos").append(
+	 "<li>"+
+     "<div class="+
+	 "ui-grid-d"+ 
+	 ">" +
+	
+	"<div class="+
+	"ui-block-a opm"+
+	">"+
+	
+	"<img class="+
+	"opm"+
+	" src="+
+	"img/logosantmarti.jpg"+
+	">" +
+	
+	"</div>"+
+    
+	
+	"<div class="+
+	"ui-block-b opm"+
+	">"+
+	result[x]['nombre'] + 
+		"<p>JORNADA 1</p></div>" +
+	
+	
+	"<div class="+
+	"ui-block-c opm"+
+	">"+
+	"00 - 00"+
+	"</div>" +
+	
+	
+	"<div class="+
+	"ui-block-d opm"+
+	">"+
+	result[x]['descripcion'] +
+	"<p>27/28 SEPTIEMBRE</p></div>"+
+	
+	"<div class="+
+	"ui-block-e opm"+
+	">"+
+	
+	"<img class="+
+	"opm"+
+	" src="+
+	"img/logo.png"+
+	">" +
+	
+	"</div>"+
+    "</div>"+
+	
+   "</li>");         
+		
+    }
+	$('#listapartidos').listview('refresh');
+  });	
+	} 
+
+</script>
+
+	</div>
+
+<!-- FIN CABECERA -->    
+
+
+<!-- CUERPO -->    
+<div role="main" class="ui-content">
+
+
+<ul data-role="listview" id="listapartidos">
+<!-- <li data-role="list-divider">PARTIDOS LLIGA CATALANA 2014 / 2015</li>
+<!--A la lista le aplicamos el data-role listview y el resto de configuración -->
+<li data-role="list-divider">Primera Vuelta</li>
+   
+   
+<code>$(document).ready(function(){
+  $.carga_equipos();
+  });
+</code>
+
+    <li>
+
+    <div class="ui-grid-d">
+      <div class="ui-block-a opm"><img class="opm" src="img/logosantmarti.jpg"></div>
+      <div class="ui-block-b opm">SANT MARTÍ "B"<p>JORNADA 1</p></div>
+      <div class="ui-block-c opm">00 - 00</div>
+      <div class="ui-block-d opm">CHR CORNELLA "A"<p>27/28 SEPTIEMBRE</p></div>
+      <div class="ui-block-e opm"><img class="opm" src="img/logo.png">
+      </div>
+    </div>    
+   </li>
+<li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 2</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">BM GRANOLLERS C<p>04/05 OCTUBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logogranollers.png"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logomanyanet.jpg"></div>
+    <div class="ui-block-b opm">HC MANYANET "A"<p>JORNADA 3</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>11/12 OCTUBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 4</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.PARDINYES "A"<p>18/19 OCTUBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logopardinyes.jpg"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logobordils.jpeg"></div>
+    <div class="ui-block-b opm">H.BORDILS "B"<p>JORNADA 5</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>25/26 OCTUBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 6</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.SANT VICENÇ<p>01/02 NOVIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logosantvi.png"></div>
+    </div>
+</li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 7</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.POBLENOU<p>08/09 NOVIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/hpoblenou.jpeg"></div>
+    </div>
+</li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CH.SANT MIQUEL<p>JORNADA 8</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>15/16 NOVIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 9</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.SABADELL<p>22/23 NOVIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logosabadell.png"></div>
+    </div>
+</li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logovilamajor.png"></div>
+    <div class="ui-block-b opm">CH.VILAMAJOR<p>JORNADA 10</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>29/30 NOVIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 11</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.BANYOLES "A"<p>13/14 DICIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logobanyoles.jpg"></div>
+    </div>
+ </li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">SALLE BONANOVA<p>JORNADA 12</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>20/21 DICIEMBRE</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li> 
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 13</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">S.EST.PALAUTORD.<p>17/18 ENERO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logosanespalautordera.jpg"></div>
+    </div>
+
+ <li>
+
+
+<li data-role="list-divider">Segunda Vuelta</li>
+    <li>
+    <div class="ui-grid-d">
+      <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+      <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 14</p></div>
+      <div class="ui-block-c opm">00 - 00</div>
+      <div class="ui-block-d opm">SANT MARTÍ "B"<p>24/25 ENERO</p></div>
+      <div class="ui-block-e opm"><img class="opm" src="img/logosantmarti.jpg"></div>
+    </div>    
+    </li>
+<li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logogranollers.png"></div>
+    <div class="ui-block-b opm">BM GRANOLLERS C<p>JORNADA 15</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>01 FEBRERO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 16</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">HC MANYANET "A"<p>07/08 FEBRERO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logomanyanet.jpg"></div>
+    </div>
+    </li>      
+<li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logopardinyes.jpg"></div>
+    <div class="ui-block-b opm">H.PARDINYES "A"<p>JORNADA 17</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>14/15 FEBRERO</p></div>
+    <div class="ui-block-e opm"><img src="img/logo.png" style="max-width:32px; max-height:32px;"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 18</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">H.BORDILS "B"<p>21/22 FEBRERO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logobordils.jpeg"></div>
+    </div>
+    </li>      
+<li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logosantvi.png"></div>
+    <div class="ui-block-b opm">H.SANT VICENÇ<p>JORNADA 19</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>01 MARZO</p></div>
+    <div class="ui-block-e opm"><img src="img/logo.png" style="max-width:32px; max-height:32px;"></div>
+    </div>
+</li>
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/hpoblenou.jpeg"></div>
+    <div class="ui-block-b opm">H.POBLENOU<p>JORNADA 20</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>07/08 MARZO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>      
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 21</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CH.SANT MIQUEL<p>14/15 MARZO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>      
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logosabadell.png"></div>
+    <div class="ui-block-b opm">H.SABADELL<p>JORNADA 22</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>21/22 MARZO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>      
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 23</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CH.VILAMAJOR<p>28/29 MARZO</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logovilamajor.png"></div>
+    </div>
+    </li>      
+<li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logobanyoles.jpg"></div>
+    <div class="ui-block-b opm">H.BANYOLES "A"<p>JORNADA 24</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>11/12 ABRIL</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>      
+ <li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logo.png"></div>
+    <div class="ui-block-b opm">CHR CORNELLA "A"<p>JORNADA 25</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">SALLE BONANOVA<p>18/19 ABRIL</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>      
+<li>
+    <div class="ui-grid-d">
+    <div class="ui-block-a opm"><img class="opm" src="img/logosanespalautordera.jpg"></div>
+    <div class="ui-block-b opm">S.EST.PALAUTORD.<p>JORNADA 26</p></div>
+    <div class="ui-block-c opm">00 - 00</div>
+    <div class="ui-block-d opm">CHR CORNELLA "A"<p>25/26 ABRIL</p></div>
+    <div class="ui-block-e opm"><img class="opm" src="img/logo.png"></div>
+    </div>
+    </li>     
+
+</ul>
+
+
+</div>
+
+ 
+ 
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-id="allot_footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li><a href="#inicio" data-id="footer_inicio" data-theme="a" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a"  data-icon="user">Plantillas</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->  
+   
+<!-- FIN DETALLE PARTIDOS--> 
+        
+        
+
+
+
+<!-------------------------------  DETALLE PARTIDOS SMA-->     
+
+  <div data-role="page" id="classma">
+  
+  <!-- CABECERA -->    
+    
+    <div data-role="header" data-position="fixed">
+    <!--    <a href="index.html" data-icon="delete">Cancel</a>  -->
+    	<div class="center-wrapper">
+      	<h1>
+       	<img class="opm" src="img/logo.png" border="0" style="margin-bottom: -5px;padding-right: 15px;"        />CHR CORNELLA</h1>
+    	</div>
+	</div>
+
+<!-- FIN CABECERA -->    
+
+
+<!-- CUERPO -->    
+<div role="main" class="ui-content">
+
+<ol data-role="listview">
+<li data-role="list-divider">CLASIFICACION LLIGA CATALANA 2014 / 2015</li>
+<!--A la lista le aplicamos el data-role listview y el resto de configuración -->
+<li data-role="list-divider">Jornada 1</li>
+    <li>
+    <div class="ui-grid-d">
+      <div class="ui-block-a opm"><img class="opm" src="img/logosantmarti.jpg" style="max-width:32px; max-height:32px;"></div>
+      <div class="ui-block-b opm">SANT MARTÍ "B"</div>
+      <div class="ui-block-c opm">2</div>
+      <div class="ui-block-d opm">1</div>
+      <div class="ui-block-e opm">0</div>
+    </div>    
+    </li>     
+<li>
+    <div class="ui-grid-d">
+      <div class="ui-block-a opm"><img class="opm" src="img/logo.png" class="ui-li-icon";></div>
+      <div class="ui-block-b opm">CHR CORNELLA "A"</div>
+      <div class="ui-block-c opm">0</div>
+      <div class="ui-block-d opm">0</div>
+      <div class="ui-block-e opm">1</div>
+    </div>    
+    </li>     
+
+</ol>
+
+
+</div>
+
+ 
+ 
+<!-- FIN CUERPO -->    
+
+<!-- PIE DE PAGINA-->    
+
+    <div data-role="footer" data-id="allot_footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+        <ul>
+         <li><a href="#inicio" data-id="footer_inicio" data-theme="a" data-icon="home">Inicio</a></li>
+            <li><a href="#partidos" data-transition="slide" data-id="footer_parti" data-theme="a" data-icon="calendar">Partidos</a></li>
+            <li><a href="#clasi" data-id="footer_clasi" data-theme="a" class="ui-btn-active ui-state-persist" data-icon="bullets">Clasificacion</a></li>
+            <li><a href="#plantillas" data-id="footer_planti" data-theme="a" data-icon="user">Plantillas</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- FIN PIE DE PAGINA-->  
+   
+<!-- FIN DETALLE CLASIFICACION SMA--> 
+        
+        
+
+
+<!-- OJOOOOOOOOOOOOOOOOOO   -------------------->
+
+<div id=category-items data-role=page>
+<div data-role=header><h1></h1></div>
+<div data-role=content>
+</div>
+</div>
+
+
+<!-- OJOOOOOOOOOOOOOOOOOO   -------------------->
+
+
+
+        
+        
+ <!-- CARGAR js -->            
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.3.min.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
+>>>>>>>>>>
